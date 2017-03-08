@@ -29,5 +29,8 @@ namespace FantasyWatch.Models
         {
             return new ApplicationDbContext();
         }
+
+        DbSet<Roster> Roster { get; set; }
+        DbSet<Player> Player { get; set; }
     }
 }

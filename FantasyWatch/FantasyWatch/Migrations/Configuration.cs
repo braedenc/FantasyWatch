@@ -2,6 +2,7 @@ namespace FantasyWatch.Migrations
 {
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
+    using Models;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -41,6 +42,9 @@ namespace FantasyWatch.Migrations
             {
                 roleResult = RoleManager.Create(new IdentityRole(roleName));
             }
+
+            var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
+            UserManager.AddToRole("15863199-58ff-4129-9f1d-0d655b8038d5", "Admin");
         }
     }
 }
