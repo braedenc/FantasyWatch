@@ -7,15 +7,10 @@ using System.Web;
 
 namespace FantasyWatch.Models
 {
-    public class Roster
+    public class League
     {
         [Key]
         public int ID { get; set; }
         public string Name { get; set; }
-        public ApplicationUser User { get; set; }
-        [ForeignKey("User")]
-        public string UserID { get; set; }
-        
-        
     }
 }

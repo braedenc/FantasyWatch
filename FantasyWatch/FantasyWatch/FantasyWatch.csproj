@@ -199,10 +199,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Migrations\201703082158089_added roster and player tables.cs" />
     <Compile Include="Migrations\201703082158089_added roster and player tables.Designer.cs">
       <DependentUpon>201703082158089_added roster and player tables.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703091516364_added league model, fixed player.cs" />
+    <Compile Include="Migrations\201703091516364_added league model, fixed player.Designer.cs">
+      <DependentUpon>201703091516364_added league model, fixed player.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\League.cs" />
     <Compile Include="SportradarAPI\PlayerContoller.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -225,6 +232,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-darkly.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\materialize\css\materialize.css" />
@@ -331,13 +339,17 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\UserIndex.cshtml" />
+    <Content Include="Views\Home\AdminIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Admin\" />
+    <Folder Include="Views\User\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Migrations\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
@@ -345,6 +357,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201703082158089_added roster and player tables.resx">
       <DependentUpon>201703082158089_added roster and player tables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703091516364_added league model, fixed player.resx">
+      <DependentUpon>201703091516364_added league model, fixed player.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

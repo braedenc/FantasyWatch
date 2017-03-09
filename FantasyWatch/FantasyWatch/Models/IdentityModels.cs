@@ -32,5 +32,6 @@ namespace FantasyWatch.Models
 
         DbSet<Roster> Roster { get; set; }
         DbSet<Player> Player { get; set; }
+        DbSet<League> League { get; set; }
     }
 }

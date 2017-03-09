@@ -10,6 +10,13 @@ namespace FantasyWatch.Controllers
     {
         public ActionResult Index()
         {
+            if (User.IsInRole("User"))
+            {
+                return View("UserIndex");
+            }else if (User.IsInRole("Admin"))
+            {
+                return View("AdminIndex");
+            }
             return View();
         }
 
